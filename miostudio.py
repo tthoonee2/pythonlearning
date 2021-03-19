@@ -48,9 +48,10 @@ print(pi)
 
 #setting up a function
 
-def new_fnct()
+def new_fnct():
     print(' this is the test for a new function')
     print 'how are you doing'
 
 #def indicates that what follows is the definition of the function
 #the name of the f is 'new_fnct'
+#se faccio una modifica chissa se viene fuori
