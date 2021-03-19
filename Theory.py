@@ -152,7 +152,7 @@ turtle.mainloop()
 #CICLES:
 #for a for cycle using the range function:
 ii = 1
-for i in range(10) :
+for ii in range(10) :
     print('hello')
 
 #il piu uno di ii si aggiunge in automatico
