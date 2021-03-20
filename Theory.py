@@ -391,4 +391,74 @@ speed=input(prompt)
 #after the input
 int(speed) #sometimes it works for some strange reason
 
+########
+#FRUITFUL FUNCTIONS AND RETURN VALUES:
+#when i call a mathematical function it will return a value
+#up until now we have called and designed void functions
+#we are finally returning values.
+#example of an area functin
+
+def area (a,b):
+    c = a*b
+    return c
+
+#or
+def area_circle(radius):
+    """it gives the area of the circle"""
+    a = math.pi * radius**2
+    return a
+
+#or to even be more synthetic
+def area_circle_2(radius):
+    return math.pi * radius ** 2
+
+#even though temporary var such as a can be useful in debugging
+#there could be used also with operators such as
+
+#define an input value
+
+number = -69
+
+def absolute_value(x):
+    if x < 0:
+        return -x
+    if x > 0:
+        return x
+
+absolute_value(number)
+
+#the part of code which will never be reached by the flow of the program
+#is called dead code
+
+#to use less computationla power during the debugging process it is good
+#to develop incrementally
+#for example if you want to find a distance using the the pythagorean
+#theorem you shall start by developing the smallest functions and then increasing it.
+
+####### composition
+#you can call one function from the other
+
+###### Boolean functions
+#functions that can return booleans, they hide the huge amount of tests from inside of the functions
+#for example:
+
+def is_divisible(x,y):
+    if x % y == 0:
+        return True
+    else:
+        return False
+
+#vorpal = something which is not useful like a perfectly recursive and uncallable function
+#a useful mathematical function could be a factorial function
+
+def factorial(n):
+    if n == 0:
+        return 1
+    else:
+        recursive = factorial(n-1)
+        result = n*recursive
+        return result
+
+factorial(300)
+
 
