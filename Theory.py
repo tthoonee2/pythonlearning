@@ -376,3 +376,19 @@ def print_n(s, n):
 #another example of a recursive, it prints a certain number of times a given string.
 #pag101
 
+###############
+#INPUT
+text = input()
+#this will make the program wait for an input from the user
+
+name = input('what is your name? \n')
+#this will display the quesiton and then wait for ani input
+#\n is a marker that makes the phrase go on a new line
+#it must be a string of digits the input, and you cannot convert it to an integer like that-
+#Error:
+prompt = ' what is the airspeed velocity of an unladed swallon \n'
+speed=input(prompt)
+#after the input
+int(speed) #sometimes it works for some strange reason
+
+
