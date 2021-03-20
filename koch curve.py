@@ -19,7 +19,7 @@ def draw(t, lenght):
             t.fd(lenght/3)
             t.lt(60)
 
-draw(koch, 2)
+draw(koch, 30)
 
 
 
