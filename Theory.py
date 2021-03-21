@@ -461,4 +461,112 @@ def factorial(n):
 
 factorial(300)
 
+##### Leap of Faith
+# instead of checking every single time th eflow of execution we assume that it  works
+# we have to check the type of the parameters, arguments and values:
+isinstance(n, int) #check the value of the variable n if corrisponds to integer 
+if not isinstance(n, int):
+    print('insert an integer please')
+
+#this form of check ups are guardians that cann be put at the beginning of functions
+
+####### the while function
+# the while statement provides for a more logical and simplified iteration
+# while something is l_op wrt to something
+
+#### break
+#the break statement gives you the opportunity to jump out of the loop or cycle
+
+while True:
+    line = input('> ')
+    if line == 'done':
+        break
+    print(line)
+
+print('Done')
+
+#### square roots can be calculated with the newton's method
+y=(x+a/x)/2
+#where y is the square root, x is the nearest estimate, a is the number to be rooted.
+#suppose
+a = 4
+x = 3
+y = ( x + a/x)/2
+y
+
+# to approximate even better
+a = 56
+x = 8
+
+
+while True:
+    print(x)
+    y = (x + a/x)/2
+    if y ==x:
+        break
+    x = y
+
+######
+#this is an example of algorithm
+
+
+############
+#strings:
+# a string is a sequence of characters. you can access the characters one at a time with the bracket operator
+#a single character can be extraccted as from a vector.
+fruit = 'banana'
+letter = fruit[1]
+letter
+#selects the letter in position 1, which corresponds to the second position within the string
+letter = fruit[0]
+letter
+
+i = 1
+fruit[i]
+fruit[i+1]
+#the index value must be integer
+
+fruit = 'banana'
+n = 5.8941616
+l = int(n)
+fruit[int(n)]
+
+##LEN
+# it returns the number of characters in a string
+
+fruit = 'banana'
+len(fruit)
+
+# to obtain the last letter on a posiition you must index it with len-1
+#string slicing: selecting a range of characters from a string
+s = 'monty python'
+s[0:5]
+s[6:12]
+#Returns the parts of the phrase selected in the range
+#if you leave the second part of the index free of a number you get the entirety of it
+s[5:]
+#if you put the same index the return is empty
+
+#strings are immutable, you cannot impose a character within the string content
+####### searching function
+def find(word, letter):
+    index = 0
+    while index < len(word):
+        if word[index]==letter:
+            return index
+        index = index + 1
+    return 'no value'
+
+find('asdrubalecicciopasticcio', 'u')
+
+######## looping and counting
+#counting within the range of a string
+word = 'banana'
+count = 0
+for letter in word:
+    if letter == 'a':
+        count = count + 1
+print(count)
+
+
 
