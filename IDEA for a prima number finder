@@ -1,0 +1,5 @@
+set up a number that keep on increasing with a cycle
+each cycle checks also if the number is a prime, then it stores it in a vector
+if it is not it sums and then waits for another check up
+a summingg up can be a fibonacci series
+a check up could be checking for all the previous numbers
