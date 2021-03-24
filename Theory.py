@@ -569,4 +569,74 @@ for letter in word:
 print(count)
 
 
+###### USEFUL STRING METHODS:
+# upper --> takes a string and makes it uppercase.
+word = 'banana'
+new_word = word.upper()
+new_word
+
+phrase = 'cicciopasticcio'
+phrase.upper()
+
+#in both cases the return value is the word in uppercase
+#in this case the method is called invocation since we are invoking it on the variable
+#it has empty paranthesis since it does not take in any rgument
+
+# find --> finds a given letter within a word. returns a value in number
+word = 'banana'
+index = word.find('a') #it is case sensitive 
+index
+
+#if it does not find the given letter it will return a -1.
+#it can also find substrings
+#it can take a second argument which defines the starting point from which to start searching for a substring
+
+word = 'australopitecus'
+index = word.find('lo', 0)
+index
+
+word[index]
+word[0]
+
+
+#in any case the index corresponds to the real position of the beginnig of the substring
+#where bear in mind that the index 0 is the first index
+#we can also set the ending of the searching process.
+
+word.find('te', 3, 15) #15 is the OPTIONAL ARGUMENT
+#wherer 15 is the ending char
+
+
+###### in operator
+#the word 'in' is a boolean operator whch takes to strings, and searches for the first string in the second one
+#if it appears it will return a true, if it does not it will return a false
+
+'a' in 'banana'
+
+def in_both(word1, word2):
+    for letter in word1:
+        if letter in word2:
+            print(letter) #it prints the letter that is both in one word and in the other.
+
+in_both('antonio','oinotna')
+
+
+#### String Comparison
+#there are three types of relation between strings:
+if word == 'banana':
+    print('All right, bananas.')
+
+#the word, if equal to banana, will return True.
+#there are other ways to compare :
+
+if word < 'banana':
+    pass
+
+#checks if they are in alphabetical order if they are both lower case,
+#if the two words differ in case ( the first is upper and the second is lower ) then we will have a situation
+#in which the upper case word comes before the lower case.
+#thus remember that before dealing with strings, convert them all to lower or all to upper case
+word = word.upper()
+word = word.lower()
+word
 
