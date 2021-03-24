@@ -640,3 +640,18 @@ word = word.upper()
 word = word.lower()
 word
 
+#### reading a txt file in python
+fin = open('words.txt')
+#fin is a common name used to indicate a file object used for input.
+#fin.read() #reads everything contained
+fin.readline() #reads a line and returns it as a string.
+#if you repeat the same command you will read the next line:
+fin.readline()
+#to get rid of the space and new line at the end just strip it away with the method .strip()
+
+fin = open('words.txt')
+line = fin.readline()
+word = line.strip()
+word
+
+
