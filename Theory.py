@@ -484,7 +484,7 @@ while True:
     print(line)
 
 print('Done')
-
+a = 4
 #### square roots can be calculated with the newton's method
 y=(x+a/x)/2
 #where y is the square root, x is the nearest estimate, a is the number to be rooted.
