@@ -16,3 +16,6 @@ def circle(t,r):
     polygon(t,n,lenght) #i can recall the polygon function inside this function with other parameters
 
 circle(bob, 30)
+
+
+
