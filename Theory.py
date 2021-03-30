@@ -1,4 +1,5 @@
-import math #mathematical library for mathematical functions
+import math
+from os import O_APPEND #mathematical library for mathematical functions
 message = ' and now something completely different'
 n = 17
 pi = 3.141592
@@ -651,8 +652,103 @@ fin.readline()
 
 fin = open('words.txt')
 line = fin.readline()
-word = line.strip()
+word = line.strip() #strips the word of the spaces or of the character selected as arguments
 word
+
+fin = open('words.txt')
+line = fin.readline()
+for line in fin:
+    print(line.strip())
+
+
+#searching for a letter 
+def has_no_e(word):
+    for letter in word:
+        if letter == 'e':
+            return False
+    return True #interesting that the Return True is outside of the cycle cuz we get to the end of the loop
+
+#more generally
+def avoids(word,forbidden):
+    for letter in word:
+        if forbidden in word:
+            return False
+    return True
+
+
+
+#LISTS:
+#listed contain elements or items, can be nested and are mutable
+#any integer can be used an index
+prova = [] #empty list
+prova1 = [1,2,3,4,[1,2]] #a nested list
+prova2 = [1,2,3,4,5,6,7,8,9] #all numbers from 1 to 9
+#the function len works also in lists, as well as the range one.
+#to cycle a list:
+for i in range(len(prova2)):
+    print(prova2[i])
+    prova2[i]= prova2[i]*2 #this updates the list and for each value gives a times 2
+
+#LIST OPERATIONS:
+a = [1,2,3]
+b = [4,5,6]
+c = a + b #concatenates the list
+
+a*3 #repeats and increases the list
+#LIST SLICES:
+a[1:3]
+a[:3]
+a[3:]
+c[1:3] = [x,y] #done to update a list in the given elements
+#LIST METHODS:
+a.append(4) #adds an element to the end
+a.extend(5,6,7) #dds more than element
+a.sort() #arranges the elements of the list from the smallest to the greatest
+#DO NOT use a = a.sort() or others, most list.methods are void
+
+#MAPPING, FILTERING AND REDUCING
+t = [1,2,3,4,5,6,6,7,5,4,3,2,2,3,4]
+def add_all(t): #where t is a list
+    total = 0 
+    for x in t:
+        total += x
+    return total
+#this is a good way , but python is so used to it that there is already an existing function
+#that does this:
+sum(t) #we REDUCE thus the list
+
+#deleting elements:
+t.pop (1) #removes the element at the given index and returns it
+del t[1] #removes the element at the given index and does not return it
+t.remove(4) #removes the element that corresponds to the argument
+#to remove more than one element use the slice:
+
+del t[1:5]
+
+#STRINGS AND LISTS:
+#to convert from a string to a list we use the list function
+string = 'cicciopasticcio'
+t =  list(string) #each character is now separated.
+
+#to split a string into words rather than in characters we use the .split()
+#where the .split() argument is the delimeter.
+string = 'sono scemo perche lo sono'
+t = string.split()
+
+#join works the opposite of split:
+t = ['ciccio','pasticcio','sono','scemo']
+delimiter = ' ' #a delimiter (which can be empty) is always needed
+s = delimiter.join(t)
+
+#equal strings are the same objects, equal lists are two different objects if declared separately
+
+
+
+
+
+
+
+
 
 ###### GUI - THEORY:
 import tkinter as tk
@@ -702,5 +798,14 @@ button = tk.Button(
     bg='blue'
 
 )
+
+""" --> this GUI tutorial is just an introduction and reminder, the rest will be moved to a new PY file""" """Maybe"""
+
+
+
+
+
+
+
 
 
