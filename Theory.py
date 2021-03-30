@@ -783,6 +783,169 @@ eng2sp.len()
 'uno' in eng2sp.values()
 
 #Lists using in will take proportionally much time to their lenght, dictiory not since they have hashtables.
+#summing up to dictionaries  --> statistical application (page 200)
+
+#Looping dictionaries:
+dictionary = {}
+def print_dict(h): #dictionary --> h
+    for c in h:
+        print(c, h[c])
+
+#to sort out the dictionary we use the the sorted() function
+print(sorted(dictionary))
+
+#REVERSE LOOKUP:
+def reverse_lookup(d,v): #takes in a value and a dictionary d.
+    for k in d:
+        if d[k] == v:
+            return k
+    raise LookupError
+
+#this function  will return the index of the dictionary if it meets the value inputted
+#and RAISES a built in exception in the case in which it does not find that given value
+#RAISE statement causes an exeption.
+#return always gets out of the function
+#a reverse look up is slow, try to use the forward (coming from the index)
+
+#Dictionaries and LISTS:
+#lists can appear as values in a dictionary, for example if you are given a dictionary with certain keys and multiple values, for each value you
+#will have multiple keys, there is a way to invert them:
+
+def invert_dict(d):
+    inverse = dict() #declare new dictionary
+    for key in d:
+        val = d[key]
+        if val not in inverse: #where val is the key in the inverse
+            inverse[val] = [key] #in the index val add key in the case val is not a key in inverse
+        else:
+            inverse[val].append(key) #to the index val lists append the key to addup to the list
+
+#storing previously calculated results in a dictionary simplifies the work 
+#global variables - established in the __main__
+#if you reassign in a function the global variable it will die within the function and keep its value outside
+#the most popular use of global vars is the flag variables containing boolean chars
+
+been_called = False #is a global statement
+#and to recall a global statement within a function we declare it
+count = 3
+def counting():
+    global count
+    count +=1 #and this will modify the global count since i declared --> i make it mutable if i recall it in
+    count
+
+counting()
+
+#if i have variable which de facto is mutable also in global, i dont need to recall it.
+dictionary = {0:0 , 1:1 , 2:2}
+
+def example3():
+    dictionary[2] = 1 #it will change the value in key 2 with 1.
+    dictionary[3] = 1 #it will add a 1 as key 3.
+
+#BUT if you want to reassing the dictionary you have to recall and declare it as global within the function.
+
+####TUPLES -- IMMUTABLE sequence of values, indexed by integers
+t = ('a', 'b', 'c', 'd') #parenthesis are not explicitely needed, but it is much better to enclose them
+#to create an empty tuple:
+t = tuple()
+#to create a tuple in which each element is a part of it just type a string and force it considered to be a tuple
+t = tuple('lupino')
+t #it will return each character separately
+#slices select the indexed elements but you cannot modify em
+#yet you can replace a tuple and change referrence:
+t = ('A') + t[1:]
+t #will return t but with the A in the front as first element
+
+#COMPARISON OF TUPLES:
+(0,1,2) < (0,3,4) #will return TRUE
+(0, 1, 2000000) < (0, 3, 4) #will return TRUE
+# Python starts by comparing
+#the first element from each sequence. If they are equal, it goes on to the next elements, and
+#so on, until it finds elements that differ. Subsequent elements are not considered (even if
+#they are really big).
+
+###TUPLE ASSIGMENT:
+#to swap a and b
+#INSTEAD OF:
+temp = a
+a = b
+b = temp
+#we do
+a, b = b, a
+
+#IN GENERAL -- the left side can be anything:
+email = 'apuzalkov@gmail.com'
+username, domain = email.split('@')
+#it will return username as apuzlakov and domain as gmail.com
+
+###TUPLES AS RETURN VALUES:
+#divmod(x,y ) where x/y and returns a tuple with the values of the quotient and the remainder
+t = divmod(7,3)
+t #returns a tuple of 7/3 --> (2,1)
+quot, rem = divmod(7,3) #the elements on the left must have a logical correlation with the elements on the right
+quot #2
+rem  #1
+
+#to pass a tuple or to pass multiple variables as a tuple in the function we precede the parameter declared with '*'
+#gathering
+def printall(*args): #takes in all the values and prints them as a tuple (GATHERING)
+    print(args)
+
+#scattering
+t = (7, 3)
+divmod(*t) #in this way takes the tuple, which is a single element, scatters it and can get the two arguments
+
+def sumall(*args): #gets an indefinite number of numbers
+    sumtot = sum(args)
+    return sumtot
+
+sumall(1,2,3,4,6,7,7,8,4,6,2,23,5,5,6,6)
+
+
+#ZIPPER: takes a string and a list and returns tuples iteracted.
+s = 'abc'
+l = [0,1,2]
+zip(s, l)
+for pair in zip(s,t):
+    print(pair)
+
+#Dictionaries and tuples:
+#there is a method called .items() which returns for each pair of keys and values the tuple corresponding
+for key, value in d.items():
+    print 
+d = {
+    'a':'1',
+    'b':'2',
+    'c':3,
+    }
+
+t= d.items()
+
+for key,value in d.items(): 
+    print(key,value)
+
+#the combination of dict and zip can create a new dictionary.
+t = [('a', 0), ('c', 2), ('b', 1)]
+d = dict(t)
+
+#OR
+
+d = dict(zip('abc', range(3)))
+directory[last, first] = number
+#The expression in brackets is a tuple. We could use tuple assignment to traverse this
+#dictionary:
+for last, first in directory:
+    print(first, last, directory[last,first])
+#This loop traverses the keys in directory, which are tuples. It assigns the elements of each tuple to last and first, then prints the name and corresponding telephone number.
+
+
+
+
+
+
+
+# 
+# the
 
 
 
