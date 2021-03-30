@@ -741,9 +741,48 @@ delimiter = ' ' #a delimiter (which can be empty) is always needed
 s = delimiter.join(t)
 
 #equal strings are the same objects, equal lists are two different objects if declared separately
+def delete_head(t): #taking a list in
+    del t[0] #deleting the first object
+
+#when it comes to lists the append returns none while the sum creates a new list
+t1 = [1,2,3]
+t2 = t1.append(4)
+t2 #will return none
+
+#Basically:  a function modifying a lists gives a none, a function creating one will give a list back
+#a function modfying must always explicit the return, yet it would still create in that case.
 
 
 
+####DICTIONARIES:
+#a dictionary is like a list but more general in which indices are types.
+#the collection of indexes is called keys.
+#key-value pair are called items
+#each key maps to a value
+#the function dict() creates a dictionary with no items.
+eng2sp = dict()
+eng2sp = {
+    'one' : 'uno',
+    'two' : 'dos',
+    'three' : 'tres'
+}
+#the order of the dictionary is not predictable , but that is not a problem since they are not indexed with integers
+#to extract a specific value we select a key - index:
+eng2sp['two']
+
+#if the key is not in the dictionary you will get an exception --> KeyError: ...
+#Len() gives the number of key-value pairs
+eng2sp.len()
+#In function appears too and tells you if there is such a key in the dictionary
+'one' in eng2sp #will return true
+#does not work with the values
+
+#to work with values we use
+#Values()
+
+'uno' in eng2sp.values()
+
+#Lists using in will take proportionally much time to their lenght, dictiory not since they have hashtables.
 
 
 
