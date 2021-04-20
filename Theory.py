@@ -1,5 +1,10 @@
+# questions are marked as follows: ???
+
+
+
 import math
-from os import O_APPEND #mathematical library for mathematical functions
+from os import O_APPEND
+from tkinter import Label #mathematical library for mathematical functions
 message = ' and now something completely different'
 n = 17
 pi = 3.141592
@@ -79,6 +84,8 @@ function_two
 
 #parameters and arguments
 
+
+
 math.sin
 #sin requires an argument to the function itself
 #we want to create functions that have arguments
@@ -109,6 +116,33 @@ pyt('sample'*4)
 
 #the function len() gives the length of the string
 #never forget about concatenation
+
+#adding optonal arguments
+def test(a,b,c, *args, **kwargs):
+    print(args)
+    print(args[4])
+    
+    
+test(1,2,3,4,4,4,5,6,6)
+#and you can iterate the args like a vector as well as the kwargs - ??? lists or dictionaries - ##are tuples too???
+
+#if you want to set default values:
+def test2(par1,par2,par3,par4 = 5, par5 = 6):
+    #the optionals par4 and par5 have to be put after the mandatory ones, so the defualt always follow the mandatory.
+
+#you can call arguments as you wish
+test2(par2= 5, par3= 8)
+
+#we can recall global values internally but not the opposite:
+world = 100
+
+def test3():
+    return 199-world
+
+
+
+
+
 
 
 #how to check whether you have the turtle module
@@ -155,6 +189,17 @@ turtle.mainloop()
 ii = 1
 for ii in range(10) :
     print('hello')
+
+#EXAMPLE:
+#Harmonic sum
+def harmonic_sum(N, a):
+    result = 0
+    for n in range(1, N+1):  #range is needed whenever the variable is not iterable
+        element = 1 / n**a   #N+1 and starting from 1 (1, N+1)
+        result += element
+
+    return result
+
 
 #il piu uno di ii si aggiunge in automatico
 #to graph a square:
@@ -940,7 +985,9 @@ for last, first in directory:
 
 
 
-# the
+# creating an empty non typed variable:
+z = None
+
 
 
 
@@ -1000,9 +1047,69 @@ button = tk.Button(
 
 
 
+#######TYPE OF ERRORS:
+"""
+AssertionError: Raised when the assert statement fails.
+AttributeError: Raised on the attribute assignment or reference fails.
+EOFError: Raised when the input() function hits the end-of-file condition.
+FloatingPointError: Raised when a floating point operation fails.
+GeneratorExit: Raised when a generator's close() method is called.
+ImportError: Raised when the imported module is not found.
+IndexError: Raised when the index of a sequence is out of range.
+KeyError: Raised when a key is not found in a dictionary.
+KeyboardInterrupt: Raised when the user hits the interrupt key (Ctrl+c or delete).
+MemoryError: Raised when an operation runs out of memory.
+NameError: Raised when a variable is not found in the local or global scope.
+NotImplementedError: Raised by abstract methods.
+OSError: Raised when a system operation causes a system-related error.
+OverflowError: Raised when the result of an arithmetic operation is too large to be represented.
+ReferenceError: Raised when a weak reference proxy is used to access a garbage collected referent.
+RuntimeError: Raised when an error does not fall under any other category.
+StopIteration: Raised by the next() function to indicate that there is no further item to be returned by the iterator.
+SyntaxError: Raised by the parser when a syntax error is encountered.
+IndentationError: Raised when there is an incorrect indentation.
+TabError: Raised when the indentation consists of inconsistent tabs and spaces.
+SystemError: Raised when the interpreter detects internal error.
+SystemExit: Raised by the sys.exit() function.
+TypeError: Raised when a function or operation is applied to an object of an incorrect type. <-- also this one is very frequent
+UnboundLocalError: Raised when a reference is made to a local variable in a function or method, but no value has been bound to that variable.
+UnicodeError: Raised when a Unicode-related encoding or decoding error occurs.
+UnicodeEncodeError: Raised when a Unicode-related error occurs during encoding.
+UnicodeDecodeError: Raised when a Unicode-related error occurs during decoding.
+UnicodeTranslateError: Raised when a Unicode-related error occurs during translation.
+ValueError: Raised when a function gets an argument of correct type but improper value. <-- one of the most frequent
+ZeroDivisionError: Raised when the second operand of a division or module operation is zero.
+"""
 
+import tkinter as tk
+#to handle this kind of errors we can use the try and expect 
+try:
+    num = int(input('insert a numerator: '))
+    den = int(input('insert the denominator: '))
+    print(num/den)
+except:
+    print('stop doing mistakes you silly')
+    input('press a button you silly...')
+    print('being silly is not an excuse')
+    print('it is "making mistakes" and not "doing mistakes"')
+    finestra = tk.Tk()
+    label = tk.Label(
+        text='you are a silly'
+    )    
+    label.pack()
+    finestra.mainloop()
 
-
-
+#we can be more specific with the type of error exception:
+try:
+    z = int(input(''))
+except ValueError:
+    print('something')
+except NameError:
+    print('something else')
+except:
+    print('all other errors')
+    
+    
+    
 
 
