@@ -1,0 +1,1 @@
+print('a script to repeat in console') #this repeats a thing when invokd by script .py
