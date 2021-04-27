@@ -657,6 +657,8 @@ word.find('te', 3, 15) #15 is the OPTIONAL ARGUMENT
 #the word 'in' is a boolean operator whch takes to strings, and searches for the first string in the second one
 #if it appears it will return a true, if it does not it will return a false
 
+
+
 'a' in 'banana'
 
 def in_both(word1, word2):
@@ -734,13 +736,17 @@ for i in range(len(prova2)):
     print(prova2[i])
     prova2[i]= prova2[i]*2 #this updates the list and for each value gives a times 2
 
+#to index the last value of a list
+#list[-1]
 #LIST OPERATIONS:
 a = [1,2,3]
 b = [4,5,6]
 c = a + b #concatenates the list
-
+c = a*3 #gives back an elongated list with the repetition of three times of the list a and they are all concatenated.
 a*3 #repeats and increases the list
 #LIST SLICES:
+a[::2] #i consider each second value starting from the beginning
+a[::-1] #i consider each single value going backwards
 a[1:3]
 a[:3]
 a[3:]
@@ -771,6 +777,11 @@ t.remove(4) #removes the element that corresponds to the argument
 del t[1:5]
 
 #STRINGS AND LISTS:
+#in the print function and in a string we can insert with the special character %d the values of a variable:
+inserting = 50
+print('the value is: %d' % inserting)
+
+#a string can be considered as an array and it is immutable
 #to convert from a string to a list we use the list function
 string = 'cicciopasticcio'
 t =  list(string) #each character is now separated.
@@ -829,6 +840,12 @@ eng2sp.len()
 
 #Lists using in will take proportionally much time to their lenght, dictiory not since they have hashtables.
 #summing up to dictionaries  --> statistical application (page 200)
+
+#you can iterate throught a dictionary:
+anexampleofdict = {'key1':1,'key2':2}
+for key,value in anexampleofdict.items():
+    print(key,value)
+    
 
 #Looping dictionaries:
 dictionary = {}
@@ -1110,6 +1127,48 @@ except:
     print('all other errors')
     
     
+#the main difference between strings, tuples, lists and dictionaries:
+#strings: immutable and contain only text
+#tuples: immutable and contain any value
+#list: mutable and indexed orderly with integers
+#dictionaries: mutable and indexed with keys
+
+#in lists we can also contain tuples
+anExample = ['list',1,3,(1,2,3),5]
+#and if iter through it we can see that the tuple is within 
+
+var = iter(anExample)
+print(next(var))
+print(next(var))
+print(next(var))
+print(next(var)) #e questa è la tupla
     
 
 
+
+
+
+
+
+######FILENAMES & PATHS:
+import os #a useful library to interact with the local paths.
+
+#########CLASSES:
+#to find the classes of libraries you can use the following function:
+import requests
+dir(requests) #checks the library directory
+class coin():
+    def __init__(self):
+        self.fixedvalue = 0
+        self.startface = 'Head'
+        self.resultOftoss = self.startface
+    
+    def toss(self):
+        import random as R
+        if R.randint(1,2) == 1:
+            self.resultOftoss = 'Head'
+        else:
+            self.resultOftoss = 'Tail'
+        print('toss result is: ', self.resultOftoss)
+        return self.resultOftoss
+    
