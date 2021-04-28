@@ -13,6 +13,7 @@ print(soup)
 #we know that our code is contained in <span> class
 # to grab any text from the website we will have to take the class with the parser.
 quotes = soup.find_all('span',class_='text')
+print(quotes)
 #we know want to retrieve the authors
 authors = soup.find_all('small', class_='author')
 #we want to retrieve the tags of each quote , yet we cannot use the normal find_all function with the <a> tag, we will
