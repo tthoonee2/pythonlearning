@@ -707,6 +707,25 @@ line = fin.readline()
 for line in fin:
     print(line.strip())
 
+#the difference between:
+"""
+.readline() --> gets as string the line of the document, it changes the cursor on the secondo position
+
+.readlines() --> gets as list of strings all the lines
+
+.read() --> gets as string the total document
+
+
+"""
+
+
+#overwriting:
+f = open("path", "w") #over
+f.write("sequencesstring \n") #\n is necessary in order to tell to write on a new line
+
+#appending:
+f =open("path", "a")
+f.write("stringtoappend")
 
 #searching for a letter 
 def has_no_e(word):
@@ -1146,12 +1165,32 @@ print(next(var)) #e questa è la tupla
 
 
 
-
+######WEBBROWSER
+import webbrowser
+webbrowser.open("url")
 
 
 
 ######FILENAMES & PATHS:
 import os #a useful library to interact with the local paths.
+
+os.listdir('path')
+#gives the list of files
+
+os.path.join(path,filename)
+#returns the path and filename if the given filename
+
+os.pa
+
+
+
+
+#######Pypi is the official site for modules
+
+###openpyxl
+
+
+
 
 #########CLASSES:
 #to find the classes of libraries you can use the following function:
