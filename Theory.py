@@ -1221,3 +1221,81 @@ class coin():
         print('toss result is: ', self.resultOftoss)
         return self.resultOftoss
     
+"""to create a class we declear it with the keyword class"""
+class test_class:
+    x = 10
+#objects are now derived from the class we created
+p1 = test_class() #THis creates the object p1
+print(p1.x) #this calls the value of x within the class itself
+
+#the __init__() function
+"""it used to assigned the values within the class
+to be later recalled by the object"""
+
+class test2:
+    def __init__(self,name,age):
+        self.name = name
+        self.age = age
+        
+p1 = test2('John', 36)  #creates the object and provides with the variables init
+print(p1.name) #recalls the object and the variable name 
+print(p1.age) #recalls the object and the ariable age.
+#the __init__() function is called each time the class is called to create the object.
+
+##OBJECT METHDOS: objects can also contain methods --> functions belong to the object
+class Person:
+    def __init__(self,name,age):
+        self.name = name
+        slef.age = age
+        
+    def functest(self):
+        print('hello my name is ' + slef.name)
+        
+obj1 = Person('John', 36)
+obj1.functest() #this recalls the function within the object which uses the data provided with the init
+
+#we can modify object properties:
+p1.age = 40 #this will change the age in the object (the class is unchanged)
+#as well as you can delete obj properties
+del p1.age
+#or delete the object itself
+del p1
+#the pass statement is used to fill an otherwise empty class
+
+class pippo:
+    pass
+
+##PYTHON INHERITANCE:
+"""inheritance allows us to deine a class that inherits the properties of the other classes"""
+"parent class" # is the class being inherited from, also called base class
+"child class" # is the lcass that inherits from another class also called derived class
+
+#the parent class is declared as a normal class:
+class parent:
+    def __init__(self, fname,lname): #gets the parameters of the object
+        self.firstname = fname
+        self.lastname = lname
+
+    def printnames(self):
+        """a function which gives back printed the fname and lname concatenated"""
+        print(self.firstname, self.lastname)
+        
+x = parent('antonio','puzalkov')
+x.printname()
+
+
+class child(parent):
+    pass
+#you cna also add other things to the child class and still inherit the parent
+#if you dont want to add anything else we just put the pass method at the end
+
+#we can add the __init__() function to the student class:
+class student(parent):
+    def __init__(self, fname, lname):
+        #add anything in it
+    #if we add the __init__() function in the child the parents' one will be overwritten.
+    
+    #to keep the __init__ function of the parent we have to add a call of it:
+        parent.__init__(self,fname,lname)
+        #or we can inherit the parameters without indicating the name of the parent
+        super().__init__(fname,lname)
