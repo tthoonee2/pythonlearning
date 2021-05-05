@@ -830,6 +830,9 @@ t2 #will return none
 
 
 ####DICTIONARIES:
+.values() #gives a list of values 
+.items() #gives the couple of key and value 
+#remember to use it
 #a dictionary is like a list but more general in which indices are types.
 #the collection of indexes is called keys.
 #key-value pair are called items
@@ -1188,6 +1191,13 @@ os.pa
 #######Pypi is the official site for modules
 
 ###openpyxl
+
+
+
+###ripassare:
+#ranges
+#vedere errori simulazione
+#imparare classi
 
 
 
