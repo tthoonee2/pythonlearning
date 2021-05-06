@@ -49,3 +49,38 @@ for m in zip(days, giorni):
 #combination of zip and enumerate
 for i,m in enumerate(zip(days,giorni),start = 1): #if the two sequences are not long enough, the cycle terminates at the shortest list
     print(i, m[0], '=', m[1], ' in italian')   #we use m[0] and m[1] since m is a tuple and we consider the first value and the second
+
+
+
+#Use transform functions like sorted, filter, map
+##FILTER FUNCTION:
+alllist = (1,2,3,4,5,6,7,8,9)
+
+def filterfunc(x):
+        if x % 2 == 0:
+            return False
+        return True
+
+onlyodd_list = list(filter(filterfunc,alllist)) #the filter removes all the false values.
+#it iterates throught the list and uses the function to determin whether the value at that moment is
+#meant to be True or False
+
+
+
+
+#you could the same with lower and uppercase
+
+def squarefun(x):
+    return x**2
+
+square  = list(map(squarefun, alllist))
+print(square)
+###MAP iterates and applies a function on the values.
+
+###SORT
+
+
+
+
+
+
