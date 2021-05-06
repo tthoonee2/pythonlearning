@@ -33,7 +33,7 @@ for example:
 """
 s = 'a random string'
 b2 = s.encode('utf-8')
-print('b2')
+print(b2)
 s2 = b2.decode() #and we can use different type of encoding, such as utf-32
 print(s2) 
 
