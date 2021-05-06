@@ -566,7 +566,9 @@ letter
 #selects the letter in position 1, which corresponds to the second position within the string
 letter = fruit[0]
 letter
-
+#method to replace characters within a string is with the builtin function
+stringresult = fruit.replace('<letter or occurance to replace>','<with what to replace',
+                             '<how many times in order, leave empty to replace everythin')
 i = 1
 fruit[i]
 fruit[i+1]
@@ -1299,3 +1301,5 @@ class student(parent):
         parent.__init__(self,fname,lname)
         #or we can inherit the parameters without indicating the name of the parent
         super().__init__(fname,lname)
+
+
