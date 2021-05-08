@@ -1303,3 +1303,13 @@ class student(parent):
         super().__init__(fname,lname)
 
 
+
+
+
+###USEFUL SHORTCUTS:
+"""
+ctrl+shift+L --> selects all occurences of that word.
+
+(ctrl+K) + (ctrl+C) --> turns all the selected lines into a comment
+"""
+
