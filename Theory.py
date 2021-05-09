@@ -690,6 +690,10 @@ word = word.upper()
 word = word.lower()
 word
 
+
+banana.endswith('\n') #to check if the string given ends with a specific character or not, if it does it returns True
+
+
 #### reading a txt file in python
 fin = open('words.txt')
 #fin is a common name used to indicate a file object used for input.
@@ -1293,6 +1297,12 @@ class child(parent):
 
 #we can add the __init__() function to the student class:
 class student(parent):
+    """[summary]
+    once i have generated a given docstring, it can be printed uising the help() function in the python console
+    
+    Args:
+        parent ([type]): [description]
+    """    
     def __init__(self, fname, lname):
         #add anything in it
     #if we add the __init__() function in the child the parents' one will be overwritten.
@@ -1302,7 +1312,7 @@ class student(parent):
         #or we can inherit the parameters without indicating the name of the parent
         super().__init__(fname,lname)
 
-
+help(student)
 
 
 
