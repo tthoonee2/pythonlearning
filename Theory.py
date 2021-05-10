@@ -3,7 +3,7 @@
 
 
 import math
-from os import O_APPEND
+from os import O_APPEND, curdir
 from tkinter import Label #mathematical library for mathematical functions
 message = ' and now something completely different'
 n = 17
@@ -24,7 +24,43 @@ print('lorem' + ' ipsum')
 x = y = 1
 print(x,y)
 
-#################################
+
+###MATHEMATICAL OPERATION:
+
+sum(1,2,3,4) #will sum the values
+max(list tuple strings  or integers)
+min(list tuple strings  or integers) 
+
+
+"""
++ #ADDITION
+- #subtraction
+* #multiplication
+/ #division
+// #floor division --> divides two numbers and rounds down to an integer
+% #modulus --> divides two integers and returns the vlaue of the reminddr
+** #exponentiation
+
+"""
+##FORMATTING:
+variable = format(1000.42520902, '.2f') 
+format(1000/7, ',.2f')
+format(1000/7, ',.2%')
+help(format)
+help('FORMATTING')
+
+round(3.8879823, 0) #will roundup the number to the specified by the second argument
+
+
+
+
+
+
+
+
+
+
+################################# 
 #useful functions
 type(x) #returns the value of x
 int(x) #takes in the value of x and tries to convert it to an integer
@@ -52,7 +88,8 @@ print(pi)
 ###################################
 
 
-#setting up a function
+####FUNCTIONS:
+#functions are useFUL to create a modular program
 
 def new_fnct(): #the header of the function is meant to have the colon
     print(' this is the test for a new function')
@@ -86,6 +123,8 @@ function_two()
 
 
 
+
+
 math.sin
 #sin requires an argument to the function itself
 #we want to create functions that have arguments
@@ -116,6 +155,14 @@ pyt('sample'*4)
 
 #the function len() gives the length of the string
 #never forget about concatenation
+
+def anexample(mandatory_parameter, optional_parameter = 2):
+    return
+''' the optional parameter is always at the end of the declaration of the parameters
+the mandatory parameter are always at the beginning'''
+
+
+
 
 #adding optonal arguments
 def test(a,b,c, *args, **kwargs):
@@ -189,6 +236,20 @@ turtle.mainloop()
 ii = 1
 for ii in range(10) :
     print('hello')
+    
+    
+    
+    
+#Range function:
+#the range function returns the object that produces a sequence of integers from start (inclusive), to stop (exclusive) 
+# by increments of step
+range(i, j)
+#if start is omitted the default value is 0
+
+
+    
+    
+    
 
 #EXAMPLE:
 #Harmonic sum
@@ -395,6 +456,16 @@ if 0 < x < 10:
     print('x is a positive single-digit number.')
 
 
+#we can check if there certain values in a given list in the following way:
+rain = 'y'
+if rain in ["Yes",'yes','y']:
+    print('put on a coat')
+#check if the variable rain, containing in this case the value 'y' is present in the list
+
+ 
+
+
+
 
 ############################
 #RECURSION
@@ -443,6 +514,12 @@ int(speed) #sometimes it works for some strange reason - it always does if done 
 #up until now we have called and designed void functions
 #we are finally returning values.
 #example of an area functin
+
+
+
+
+
+
 
 def area (a,b):
     c = a*b
@@ -522,6 +599,17 @@ if not isinstance(n, int):
 
 #### break
 #the break statement gives you the opportunity to jump out of the loop or cycle
+#the opposite statement is the continue statement
+""" 
+    break
+    continue
+"""
+
+
+
+
+
+
 
 while True:
     line = input('> ')
@@ -554,6 +642,42 @@ while True:
 
 ######
 #this is an example of algorithm
+
+###SEQUENCES IN COMMON:
+#operators:
+''' 
++ --> concatenation
+* --> repetition and merging
+in --> returns true if an element is found in a sequence
+len(seq) --> returns the number of elements of the sequence
+max(seq) and min(seq) --> returns the largest and the smallest value in a sequence
+sorted(seq) --> returns a new list with the elements sorted in ascending order
+sum(seq) --> sums the elements of the sequence ( numbers only )
+
+'''
+list1 = [1,2,3]
+list2 = [4,5,6]
+list3 = list1 + list2
+print(list3) #concatenates
+
+#STRINGS METHODS
+#methods:
+# .upper() --> returns a copy with all the chars in capital
+# .lower() --> returns a copy with all theh chars in lower
+# .find() --> returns the index of the the argument of the method in the string
+# .startswith() --> returns true if the strings starts with the argument specified in the function
+# .endswith() --> returns true if the string starts wit hthe argument specified by the method
+# .count() --> returns the number of times the argument is found in the string
+# .split() --> splits the string into a list based on the value specified as the argument
+# .join() --> joins the string with an iterable object specified as argument
+
+
+
+
+
+
+
+
 
 
 ############
@@ -616,8 +740,23 @@ for letter in word:
         count = count + 1
 print(count)
 
+#STRING ESCAPE CODE:
+'\n'#escape code for going on a new line
+'\t' #escape code for tabulation
+"bingo \" "  #text wrapping, used to go on a new line in the compiler but to keep the text on the same line
+'\\' #prints \
+'\'' #prints '
+
+
+
+
+
 
 ###### USEFUL STRING METHODS:
+
+
+
+
 # upper --> takes a string and makes it uppercase.
 word = 'banana'
 new_word = word.upper()
@@ -681,6 +820,10 @@ if word == 'banana':
 
 if word < 'banana':
     pass
+#the pass statement is used as a marker to complete an incomplete condition
+
+
+
 
 #checks if they are in alphabetical order if they are both lower case,
 #if the two words differ in case ( the first is upper and the second is lower ) then we will have a situation
@@ -834,6 +977,7 @@ t = string.split()
 t = ['ciccio','pasticcio','sono','scemo']
 delimiter = ' ' #a delimiter (which can be empty) is always needed
 s = delimiter.join(t)
+# all the arguments of the string must be strings
 
 #equal strings are the same objects, equal lists are two different objects if declared separately
 def delete_head(t): #taking a list in
@@ -870,7 +1014,7 @@ eng2sp['two']
 
 #if the key is not in the dictionary you will get an exception --> KeyError: ...
 #Len() gives the number of key-value pairs
-eng2sp.len()
+len(eng2sp)
 #In function appears too and tells you if there is such a key in the dictionary
 'one' in eng2sp #will return true
 #does not work with the values
@@ -1106,7 +1250,23 @@ button = tk.Button(
 
 
 
+
+
+
+
+
+
+
+
 #######TYPE OF ERRORS:
+#aminly the following:
+#syntax errors --> error in the writing of the code (syntax)
+#runtime error --> error in the code   - ex: a non declared variable
+#semantic erros: --> the program runs and executes but the result is not the expected one
+
+
+
+
 """
 AssertionError: Raised when the assert statement fails.
 AttributeError: Raised on the attribute assignment or reference fails.
@@ -1139,7 +1299,7 @@ UnicodeTranslateError: Raised when a Unicode-related error occurs during transla
 ValueError: Raised when a function gets an argument of correct type but improper value. <-- one of the most frequent
 ZeroDivisionError: Raised when the second operand of a division or module operation is zero.
 """
-
+#EXCEPTION handling:
 import tkinter as tk
 #to handle this kind of errors we can use the try and expect 
 try:
@@ -1163,12 +1323,15 @@ try:
     z = int(input(''))
 except ValueError:
     print('something')
-except NameError:
+except NameError: #we can specify particular errors in fact
     print('something else')
 except:
     print('all other errors')
     
     
+    
+    
+  
 #the main difference between strings, tuples, lists and dictionaries:
 #strings: immutable and contain only text
 #tuples: immutable and contain any value
@@ -1266,10 +1429,10 @@ print(p1.age) #recalls the object and the ariable age.
 class Person:
     def __init__(self,name,age):
         self.name = name
-        slef.age = age
+        self.age = age
         
     def functest(self):
-        print('hello my name is ' + slef.name)
+        print('hello my name is ' + self.name)
         
 obj1 = Person('John', 36)
 obj1.functest() #this recalls the function within the object which uses the data provided with the init
