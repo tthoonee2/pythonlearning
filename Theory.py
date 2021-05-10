@@ -740,7 +740,11 @@ f.write("stringtoappend")
 f = open("path", "r") 
 
 #reading and writing:
-f = oepn("path", )
+f = open("path", "r+" )
+or
+f = open("path", "w+")
+
+
 
 
 #searching for a letter 
