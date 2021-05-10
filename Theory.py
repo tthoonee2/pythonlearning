@@ -74,7 +74,7 @@ def function_two():
     print(2+2)
     print(math.pi)
 
-function_two
+function_two()
 
 
 
@@ -331,9 +331,9 @@ x < y
 x >= y
 x <= y
 #Logical operators:
-#and
-#or
-#not
+and
+or
+not
 
 x > 0 and x < 10
 x > 0 or x < 10 #gives true if both are true or just one
@@ -435,7 +435,7 @@ name = input('what is your name? \n')
 prompt = ' what is the airspeed velocity of an unladed swallon \n'
 speed=input(prompt)
 #after the input
-int(speed) #sometimes it works for some strange reason
+int(speed) #sometimes it works for some strange reason - it always does if done correctly
 
 ########
 #FRUITFUL FUNCTIONS AND RETURN VALUES:
@@ -494,7 +494,7 @@ def is_divisible(x,y):
     else:
         return False
 
-#vorpal = something which is not useful like a perfectly recursive and uncallable function
+#vorpal = something which is not useful like a perfectly recursive and uncallable function #-#
 #a useful mathematical function could be a factorial function
 
 def factorial(n):
@@ -725,6 +725,9 @@ for line in fin:
 """
 
 
+
+
+
 #overwriting:
 f = open("path", "w") #over
 f.write("sequencesstring \n") #\n is necessary in order to tell to write on a new line
@@ -732,6 +735,13 @@ f.write("sequencesstring \n") #\n is necessary in order to tell to write on a ne
 #appending:
 f =open("path", "a")
 f.write("stringtoappend")
+
+#reading:
+f = open("path", "r") 
+
+#reading and writing:
+f = oepn("path", )
+
 
 #searching for a letter 
 def has_no_e(word):
@@ -1313,6 +1323,17 @@ class student(parent):
         super().__init__(fname,lname)
 
 help(student)
+
+
+
+
+
+
+
+
+
+
+
 
 
 
