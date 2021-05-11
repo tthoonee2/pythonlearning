@@ -671,17 +671,42 @@ print(list3) #concatenates
 # .split() --> splits the string into a list based on the value specified as the argument
 # .join() --> joins the string with an iterable object specified as argument
 
-
-
-
-
-
-
-
-
-
 ############
 #strings:
+#Strings operators:
+''' 
++ --> concatenation
+* --> repetition and merging
+in --> returns true if an element is found in a sequence
+not in --> returns true if an element is not found in a sequence
+is --> returns true if the two strings are identical
+is not --> returns false if the two are identical
+'''
+
+#if you try to assign a value to an index in a string you :
+#slicing,stepping and selecting:
+aRandomSTring = 'lorem ipsum generator testing'
+aRandomSTring[::-1] #selects all and steps backward
+#string[start:end:step]
+aRandomSTring[0::3] #selects every 3 letters
+
+min() #--> minimum alphabetical value of the string
+max() #--> opposite to min
+len() #--> lenght of string
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # a string is a sequence of characters. you can access the characters one at a time with the bracket operator
 #a single character can be extraccted as from a vector.
 fruit = 'banana'
@@ -887,6 +912,15 @@ f = open("path", "r+" )
 or
 f = open("path", "w+")
 
+#FILE METHODS:
+f.name #returns the name of the file
+f.mode #returns the mode we are reading the file
+f.closed #returns true if the file has been closed
+
+
+
+
+
 
 
 
@@ -934,10 +968,27 @@ a[:3]
 a[3:]
 c[1:3] = [x,y] #done to update a list in the given elements
 #LIST METHODS:
+element = 0
 a.append(4) #adds an element to the end
 a.extend(5,6,7) #dds more than element
 a.sort() #arranges the elements of the list from the smallest to the greatest
 #DO NOT use a = a.sort() or others, most list.methods are void
+a.insert('index','element') #inserts and shifts a given element in a list
+a.remove(element) #removes the element from the list
+a.pop(index) #pops the element at the index from the list
+a.extend(list2) #appends to the list a second list specified as argument
+a.index(element) #search for given element and returns the index, only the first occurence
+a.sort() #sorts and returns None
+a.reverse() #reverses the list
+a.clear() #clears the list
+a.count(element) #counts the occurances of an element within the list
+b = a.copy() #returns a copy of the list
+
+
+
+
+
+
 
 #MAPPING, FILTERING AND REDUCING
 t = [1,2,3,4,5,6,6,7,5,4,3,2,2,3,4]
@@ -1002,6 +1053,47 @@ t2 #will return none
 #key-value pair are called items
 #each key maps to a value
 #the function dict() creates a dictionary with no items.
+
+aRandomDict = {}
+aRandomDict['gag'] = 'gig' #method to add a new key-value pair to the dictionary.
+aRandomDict['gag'] #to retreive the value
+print(aRandomDict)
+
+#OPERATORS:
+in # --> searhces within the dictionary the presence of a key
+del # --> deletes within the dictionary the key-value pair
+len #--> returns the number of key-values pairs
+
+#METHODS: 
+aRandomDict.get('gag') #--> like using the parenthesis
+aRandomDict.pop('gag') #--> removes from the dictionary the key specified and returns the value (which can be stored in another folder)
+#if the value is not find with the .pop() the program raises the exception KeyError
+aRandomDict.popitem() #--> returns the last item of the dictionary (as a tuple of key,value)
+.items() #--> creates an object consisting in a list of tuples, each one with two elements
+.keys() #--> creates a dict_keys object consisting in a list in which each element is one key
+.values() #--> creates a dict_values object consisting in a list in which each element is one of the value of the dictionary
+.update(dict2) #--> appends the key-value pair of the new dict to the first specified
+.clear() # --> self explanatory
+
+
+
+
+
+
+#FUNCTIONS:
+len() #lenght of the keys of the dict
+dict() #creates an empty dictionary
+max() #returns the maximum value of the keys (keys only)
+min() #returns the opposite
+sorted() #returns the list of the keys in an ascendent order
+
+
+
+
+
+
+
+
 eng2sp = dict()
 eng2sp = {
     'one' : 'uno',
@@ -1032,6 +1124,17 @@ anexampleofdict = {'key1':1,'key2':2}
 for key,value in anexampleofdict.items():
     print(key,value)
     
+
+#TRAVERSING DICTIONARIES:
+#keys are traversed with the use of for loop:
+for key in anexampleofdict:
+    continue
+
+#we can also traverse key-value pairs using the for loop with .items():
+anexampleofdict = {'key1':1,'key2':2}
+for key,value in anexampleofdict.items():
+    print(key,value)
+
 
 #Looping dictionaries:
 dictionary = {}
@@ -1093,6 +1196,25 @@ def example3():
 #BUT if you want to reassing the dictionary you have to recall and declare it as global within the function.
 
 ####TUPLES -- IMMUTABLE sequence of values, indexed by integers
+##TUPLE FUNCTIONs:
+len() #--> returns lenght of the tuple
+tuple() #--> declares the tuple or converts an iterable to it
+max() #--> returns the element with the highest number or the string with the initial letter having the highest alph. value
+min() #same but opposite
+#the max() and min() have to have the same type of objects within, a tuple with  both a string and a number wont work
+sorted() #returns a new list with ascendent order
+sum() #SUMS  all elements of the tuple
+
+#METHODS
+t = ()
+t.index(element)
+t.count(element)
+
+
+
+
+
+
 t = ('a', 'b', 'c', 'd') #parenthesis are not explicitely needed, but it is much better to enclose them
 #to create an empty tuple:
 t = tuple()
@@ -1364,9 +1486,27 @@ os.listdir('path')
 #gives the list of files
 
 os.path.join(path,filename)
-#returns the path and filename if the given filename
+#returns the path and filename of the given filename
 
-os.pa
+os.path.isifle(path)
+#returns true if the path is referring to a file, false otherwise
+
+
+#RANDOM MODULE:
+import random
+random.random() 
+#returns a random decimal number between 0 and 1
+
+random.randint(min,max)
+#returns a random integer number between min and max
+
+random.choice(list)
+#returns a ranodm element from the list given as argument
+
+random.randrange(min,max,step)
+#returns a random integer between min and max with an increace of step
+
+
 
 
 
@@ -1386,6 +1526,51 @@ os.pa
 
 
 #########CLASSES:
+#class is the blueprint
+#object is the concrete INSTANCE of the class
+#methods are actions that the object can do
+#object: : is the abstract definition used for elements that are characterized by 
+        #attributes (how it is made) and methods (how we can modify and use it)
+#Class:: is the abstract description of an object. It represents the set of objects 
+        #(«family») of a certain type. A class is made of attributes and methods 
+#instance: is the term used for a specific «real» object of a class
+#BUILDING A CLASS:
+class Name(): #definition and name
+    """[summary]
+        tutorial
+    Returns:
+        [type]: [description]
+    """ #docstring description
+    def __init__(self,first,second,third = 88): #constructur method where all the attributes are specified
+        #attribute #it includes calls for funtions as well as opening of files and access to db
+        #attribute
+        #attribute
+        self.first = first
+        self.second = second
+        self.third = third
+        self.another = 0 #initilzied and later can be recalled in the object and can be assigned a value
+        
+    def method(self): #method --> instruction, self --> positional requirement
+        #instruction
+        #instruction
+        #instruction
+            pass
+        
+    #special method
+    def __str__(self):
+        #used to create a printout of the class when called
+        t = 'This is a class example' + self.third            
+        return t #must always end with the return statement
+                
+    
+
+instance = Name(1,2,3)
+instance.another = 6
+Name.method() #you can have specific parameters for the  method
+#but at least when the declared you need to have the self parameter
+print(instance) #will print the object __Str__
+
+
 #to find the classes of libraries you can use the following function:
 import requests
 dir(requests) #checks the library directory
@@ -1465,6 +1650,44 @@ class parent:
         
 x = parent('antonio','puzalkov')
 x.printname()
+
+
+
+
+
+
+#HIERARCHIES AND INHERITANCE:
+''' 
+parent class(superclass)
+child class (subclass):
+- the child class inherits all the data and the methods of the parent class
+- adds more info and methods
+- overwrites methods
+the following is an example:
+'''
+
+class student(Person): #class parent specified as 
+    def __init__(self, IDnum, name,age): #args from the parent are still included since they have to be insert
+        Person.__init__(self,name,age)  #__init__ method from the parent class recalled to be filled by user/programmer
+        self.idnum = IDnum #new variable added for the child class
+        
+    def __str__(self):
+        return super().__str__() #will reutnr the __str__ of the parent
+    #YOU CANNOT HAVE BOTH - JUST FOR EXAMPLE
+    def __str__(self):
+        t = 'a new string for explanation ' #will return this str
+        return t   #redefined method
+    
+    def method(self):
+        #a new method, original for the child
+    
+    #all other methods from the father/parent class are preserved
+    #and they can be called with an instance specified with class child
+    
+    
+
+
+
 
 
 class child(parent):
