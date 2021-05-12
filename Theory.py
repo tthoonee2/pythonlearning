@@ -3,7 +3,7 @@
 
 
 import math
-from os import O_APPEND
+from os import O_APPEND, curdir
 from tkinter import Label #mathematical library for mathematical functions
 message = ' and now something completely different'
 n = 17
@@ -24,7 +24,43 @@ print('lorem' + ' ipsum')
 x = y = 1
 print(x,y)
 
-#################################
+
+###MATHEMATICAL OPERATION:
+
+sum(1,2,3,4) #will sum the values
+max(list tuple strings  or integers)
+min(list tuple strings  or integers) 
+
+
+"""
++ #ADDITION
+- #subtraction
+* #multiplication
+/ #division
+// #floor division --> divides two numbers and rounds down to an integer
+% #modulus --> divides two integers and returns the vlaue of the reminddr
+** #exponentiation
+
+"""
+##FORMATTING:
+variable = format(1000.42520902, '.2f') 
+format(1000/7, ',.2f')
+format(1000/7, ',.2%')
+help(format)
+help('FORMATTING')
+
+round(3.8879823, 0) #will roundup the number to the specified by the second argument
+
+
+
+
+
+
+
+
+
+
+################################# 
 #useful functions
 type(x) #returns the value of x
 int(x) #takes in the value of x and tries to convert it to an integer
@@ -52,7 +88,8 @@ print(pi)
 ###################################
 
 
-#setting up a function
+####FUNCTIONS:
+#functions are useFUL to create a modular program
 
 def new_fnct(): #the header of the function is meant to have the colon
     print(' this is the test for a new function')
@@ -74,7 +111,7 @@ def function_two():
     print(2+2)
     print(math.pi)
 
-function_two
+function_two()
 
 
 
@@ -83,6 +120,8 @@ function_two
 #thus always use a scheme
 
 #parameters and arguments
+
+
 
 
 
@@ -116,6 +155,14 @@ pyt('sample'*4)
 
 #the function len() gives the length of the string
 #never forget about concatenation
+
+def anexample(mandatory_parameter, optional_parameter = 2):
+    return
+''' the optional parameter is always at the end of the declaration of the parameters
+the mandatory parameter are always at the beginning'''
+
+
+
 
 #adding optonal arguments
 def test(a,b,c, *args, **kwargs):
@@ -189,6 +236,20 @@ turtle.mainloop()
 ii = 1
 for ii in range(10) :
     print('hello')
+    
+    
+    
+    
+#Range function:
+#the range function returns the object that produces a sequence of integers from start (inclusive), to stop (exclusive) 
+# by increments of step
+range(i, j)
+#if start is omitted the default value is 0
+
+
+    
+    
+    
 
 #EXAMPLE:
 #Harmonic sum
@@ -331,9 +392,9 @@ x < y
 x >= y
 x <= y
 #Logical operators:
-#and
-#or
-#not
+and
+or
+not
 
 x > 0 and x < 10
 x > 0 or x < 10 #gives true if both are true or just one
@@ -395,6 +456,16 @@ if 0 < x < 10:
     print('x is a positive single-digit number.')
 
 
+#we can check if there certain values in a given list in the following way:
+rain = 'y'
+if rain in ["Yes",'yes','y']:
+    print('put on a coat')
+#check if the variable rain, containing in this case the value 'y' is present in the list
+
+ 
+
+
+
 
 ############################
 #RECURSION
@@ -435,7 +506,7 @@ name = input('what is your name? \n')
 prompt = ' what is the airspeed velocity of an unladed swallon \n'
 speed=input(prompt)
 #after the input
-int(speed) #sometimes it works for some strange reason
+int(speed) #sometimes it works for some strange reason - it always does if done correctly
 
 ########
 #FRUITFUL FUNCTIONS AND RETURN VALUES:
@@ -443,6 +514,12 @@ int(speed) #sometimes it works for some strange reason
 #up until now we have called and designed void functions
 #we are finally returning values.
 #example of an area functin
+
+
+
+
+
+
 
 def area (a,b):
     c = a*b
@@ -494,7 +571,7 @@ def is_divisible(x,y):
     else:
         return False
 
-#vorpal = something which is not useful like a perfectly recursive and uncallable function
+#vorpal = something which is not useful like a perfectly recursive and uncallable function #-#
 #a useful mathematical function could be a factorial function
 
 def factorial(n):
@@ -522,6 +599,17 @@ if not isinstance(n, int):
 
 #### break
 #the break statement gives you the opportunity to jump out of the loop or cycle
+#the opposite statement is the continue statement
+""" 
+    break
+    continue
+"""
+
+
+
+
+
+
 
 while True:
     line = input('> ')
@@ -555,9 +643,70 @@ while True:
 ######
 #this is an example of algorithm
 
+###SEQUENCES IN COMMON:
+#operators:
+''' 
++ --> concatenation
+* --> repetition and merging
+in --> returns true if an element is found in a sequence
+len(seq) --> returns the number of elements of the sequence
+max(seq) and min(seq) --> returns the largest and the smallest value in a sequence
+sorted(seq) --> returns a new list with the elements sorted in ascending order
+sum(seq) --> sums the elements of the sequence ( numbers only )
+
+'''
+list1 = [1,2,3]
+list2 = [4,5,6]
+list3 = list1 + list2
+print(list3) #concatenates
+
+#STRINGS METHODS
+#methods:
+# .upper() --> returns a copy with all the chars in capital
+# .lower() --> returns a copy with all theh chars in lower
+# .find() --> returns the index of the the argument of the method in the string
+# .startswith() --> returns true if the strings starts with the argument specified in the function
+# .endswith() --> returns true if the string starts wit hthe argument specified by the method
+# .count() --> returns the number of times the argument is found in the string
+# .split() --> splits the string into a list based on the value specified as the argument
+# .join() --> joins the string with an iterable object specified as argument
 
 ############
 #strings:
+#Strings operators:
+''' 
++ --> concatenation
+* --> repetition and merging
+in --> returns true if an element is found in a sequence
+not in --> returns true if an element is not found in a sequence
+is --> returns true if the two strings are identical
+is not --> returns false if the two are identical
+'''
+
+#if you try to assign a value to an index in a string you :
+#slicing,stepping and selecting:
+aRandomSTring = 'lorem ipsum generator testing'
+aRandomSTring[::-1] #selects all and steps backward
+#string[start:end:step]
+aRandomSTring[0::3] #selects every 3 letters
+
+min() #--> minimum alphabetical value of the string
+max() #--> opposite to min
+len() #--> lenght of string
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # a string is a sequence of characters. you can access the characters one at a time with the bracket operator
 #a single character can be extraccted as from a vector.
 fruit = 'banana'
@@ -616,8 +765,23 @@ for letter in word:
         count = count + 1
 print(count)
 
+#STRING ESCAPE CODE:
+'\n'#escape code for going on a new line
+'\t' #escape code for tabulation
+"bingo \" "  #text wrapping, used to go on a new line in the compiler but to keep the text on the same line
+'\\' #prints \
+'\'' #prints '
+
+
+
+
+
 
 ###### USEFUL STRING METHODS:
+
+
+
+
 # upper --> takes a string and makes it uppercase.
 word = 'banana'
 new_word = word.upper()
@@ -681,6 +845,10 @@ if word == 'banana':
 
 if word < 'banana':
     pass
+#the pass statement is used as a marker to complete an incomplete condition
+
+
+
 
 #checks if they are in alphabetical order if they are both lower case,
 #if the two words differ in case ( the first is upper and the second is lower ) then we will have a situation
@@ -725,6 +893,9 @@ for line in fin:
 """
 
 
+
+
+
 #overwriting:
 f = open("path", "w") #over
 f.write("sequencesstring \n") #\n is necessary in order to tell to write on a new line
@@ -732,6 +903,26 @@ f.write("sequencesstring \n") #\n is necessary in order to tell to write on a ne
 #appending:
 f =open("path", "a")
 f.write("stringtoappend")
+
+#reading:
+f = open("path", "r") 
+
+#reading and writing:
+f = open("path", "r+" )
+or
+f = open("path", "w+")
+
+#FILE METHODS:
+f.name #returns the name of the file
+f.mode #returns the mode we are reading the file
+f.closed #returns true if the file has been closed
+
+
+
+
+
+
+
 
 #searching for a letter 
 def has_no_e(word):
@@ -777,10 +968,27 @@ a[:3]
 a[3:]
 c[1:3] = [x,y] #done to update a list in the given elements
 #LIST METHODS:
+element = 0
 a.append(4) #adds an element to the end
 a.extend(5,6,7) #dds more than element
 a.sort() #arranges the elements of the list from the smallest to the greatest
 #DO NOT use a = a.sort() or others, most list.methods are void
+a.insert('index','element') #inserts and shifts a given element in a list
+a.remove(element) #removes the element from the list
+a.pop(index) #pops the element at the index from the list
+a.extend(list2) #appends to the list a second list specified as argument
+a.index(element) #search for given element and returns the index, only the first occurence
+a.sort() #sorts and returns None
+a.reverse() #reverses the list
+a.clear() #clears the list
+a.count(element) #counts the occurances of an element within the list
+b = a.copy() #returns a copy of the list
+
+
+
+
+
+
 
 #MAPPING, FILTERING AND REDUCING
 t = [1,2,3,4,5,6,6,7,5,4,3,2,2,3,4]
@@ -820,6 +1028,7 @@ t = string.split()
 t = ['ciccio','pasticcio','sono','scemo']
 delimiter = ' ' #a delimiter (which can be empty) is always needed
 s = delimiter.join(t)
+# all the arguments of the string must be strings
 
 #equal strings are the same objects, equal lists are two different objects if declared separately
 def delete_head(t): #taking a list in
@@ -844,6 +1053,47 @@ t2 #will return none
 #key-value pair are called items
 #each key maps to a value
 #the function dict() creates a dictionary with no items.
+
+aRandomDict = {}
+aRandomDict['gag'] = 'gig' #method to add a new key-value pair to the dictionary.
+aRandomDict['gag'] #to retreive the value
+print(aRandomDict)
+
+#OPERATORS:
+in # --> searhces within the dictionary the presence of a key
+del # --> deletes within the dictionary the key-value pair
+len #--> returns the number of key-values pairs
+
+#METHODS: 
+aRandomDict.get('gag') #--> like using the parenthesis
+aRandomDict.pop('gag') #--> removes from the dictionary the key specified and returns the value (which can be stored in another folder)
+#if the value is not find with the .pop() the program raises the exception KeyError
+aRandomDict.popitem() #--> returns the last item of the dictionary (as a tuple of key,value)
+.items() #--> creates an object consisting in a list of tuples, each one with two elements
+.keys() #--> creates a dict_keys object consisting in a list in which each element is one key
+.values() #--> creates a dict_values object consisting in a list in which each element is one of the value of the dictionary
+.update(dict2) #--> appends the key-value pair of the new dict to the first specified
+.clear() # --> self explanatory
+
+
+
+
+
+
+#FUNCTIONS:
+len() #lenght of the keys of the dict
+dict() #creates an empty dictionary
+max() #returns the maximum value of the keys (keys only)
+min() #returns the opposite
+sorted() #returns the list of the keys in an ascendent order
+
+
+
+
+
+
+
+
 eng2sp = dict()
 eng2sp = {
     'one' : 'uno',
@@ -856,7 +1106,7 @@ eng2sp['two']
 
 #if the key is not in the dictionary you will get an exception --> KeyError: ...
 #Len() gives the number of key-value pairs
-eng2sp.len()
+len(eng2sp)
 #In function appears too and tells you if there is such a key in the dictionary
 'one' in eng2sp #will return true
 #does not work with the values
@@ -874,6 +1124,17 @@ anexampleofdict = {'key1':1,'key2':2}
 for key,value in anexampleofdict.items():
     print(key,value)
     
+
+#TRAVERSING DICTIONARIES:
+#keys are traversed with the use of for loop:
+for key in anexampleofdict:
+    continue
+
+#we can also traverse key-value pairs using the for loop with .items():
+anexampleofdict = {'key1':1,'key2':2}
+for key,value in anexampleofdict.items():
+    print(key,value)
+
 
 #Looping dictionaries:
 dictionary = {}
@@ -935,6 +1196,25 @@ def example3():
 #BUT if you want to reassing the dictionary you have to recall and declare it as global within the function.
 
 ####TUPLES -- IMMUTABLE sequence of values, indexed by integers
+##TUPLE FUNCTIONs:
+len() #--> returns lenght of the tuple
+tuple() #--> declares the tuple or converts an iterable to it
+max() #--> returns the element with the highest number or the string with the initial letter having the highest alph. value
+min() #same but opposite
+#the max() and min() have to have the same type of objects within, a tuple with  both a string and a number wont work
+sorted() #returns a new list with ascendent order
+sum() #SUMS  all elements of the tuple
+
+#METHODS
+t = ()
+t.index(element)
+t.count(element)
+
+
+
+
+
+
 t = ('a', 'b', 'c', 'd') #parenthesis are not explicitely needed, but it is much better to enclose them
 #to create an empty tuple:
 t = tuple()
@@ -1092,7 +1372,23 @@ button = tk.Button(
 
 
 
+
+
+
+
+
+
+
+
 #######TYPE OF ERRORS:
+#aminly the following:
+#syntax errors --> error in the writing of the code (syntax)
+#runtime error --> error in the code   - ex: a non declared variable
+#semantic erros: --> the program runs and executes but the result is not the expected one
+
+
+
+
 """
 AssertionError: Raised when the assert statement fails.
 AttributeError: Raised on the attribute assignment or reference fails.
@@ -1125,7 +1421,7 @@ UnicodeTranslateError: Raised when a Unicode-related error occurs during transla
 ValueError: Raised when a function gets an argument of correct type but improper value. <-- one of the most frequent
 ZeroDivisionError: Raised when the second operand of a division or module operation is zero.
 """
-
+#EXCEPTION handling:
 import tkinter as tk
 #to handle this kind of errors we can use the try and expect 
 try:
@@ -1149,12 +1445,15 @@ try:
     z = int(input(''))
 except ValueError:
     print('something')
-except NameError:
+except NameError: #we can specify particular errors in fact
     print('something else')
 except:
     print('all other errors')
     
     
+    
+    
+  
 #the main difference between strings, tuples, lists and dictionaries:
 #strings: immutable and contain only text
 #tuples: immutable and contain any value
@@ -1187,9 +1486,27 @@ os.listdir('path')
 #gives the list of files
 
 os.path.join(path,filename)
-#returns the path and filename if the given filename
+#returns the path and filename of the given filename
 
-os.pa
+os.path.isifle(path)
+#returns true if the path is referring to a file, false otherwise
+
+
+#RANDOM MODULE:
+import random
+random.random() 
+#returns a random decimal number between 0 and 1
+
+random.randint(min,max)
+#returns a random integer number between min and max
+
+random.choice(list)
+#returns a ranodm element from the list given as argument
+
+random.randrange(min,max,step)
+#returns a random integer between min and max with an increace of step
+
+
 
 
 
@@ -1209,6 +1526,51 @@ os.pa
 
 
 #########CLASSES:
+#class is the blueprint
+#object is the concrete INSTANCE of the class
+#methods are actions that the object can do
+#object: : is the abstract definition used for elements that are characterized by 
+        #attributes (how it is made) and methods (how we can modify and use it)
+#Class:: is the abstract description of an object. It represents the set of objects 
+        #(«family») of a certain type. A class is made of attributes and methods 
+#instance: is the term used for a specific «real» object of a class
+#BUILDING A CLASS:
+class Name(): #definition and name
+    """[summary]
+        tutorial
+    Returns:
+        [type]: [description]
+    """ #docstring description
+    def __init__(self,first,second,third = 88): #constructur method where all the attributes are specified
+        #attribute #it includes calls for funtions as well as opening of files and access to db
+        #attribute
+        #attribute
+        self.first = first
+        self.second = second
+        self.third = third
+        self.another = 0 #initilzied and later can be recalled in the object and can be assigned a value
+        
+    def method(self): #method --> instruction, self --> positional requirement
+        #instruction
+        #instruction
+        #instruction
+            pass
+        
+    #special method
+    def __str__(self):
+        #used to create a printout of the class when called
+        t = 'This is a class example' + self.third            
+        return t #must always end with the return statement
+                
+    
+
+instance = Name(1,2,3)
+instance.another = 6
+Name.method() #you can have specific parameters for the  method
+#but at least when the declared you need to have the self parameter
+print(instance) #will print the object __Str__
+
+
 #to find the classes of libraries you can use the following function:
 import requests
 dir(requests) #checks the library directory
@@ -1252,10 +1614,10 @@ print(p1.age) #recalls the object and the ariable age.
 class Person:
     def __init__(self,name,age):
         self.name = name
-        slef.age = age
+        self.age = age
         
     def functest(self):
-        print('hello my name is ' + slef.name)
+        print('hello my name is ' + self.name)
         
 obj1 = Person('John', 36)
 obj1.functest() #this recalls the function within the object which uses the data provided with the init
@@ -1290,6 +1652,44 @@ x = parent('antonio','puzalkov')
 x.printname()
 
 
+
+
+
+
+#HIERARCHIES AND INHERITANCE:
+''' 
+parent class(superclass)
+child class (subclass):
+- the child class inherits all the data and the methods of the parent class
+- adds more info and methods
+- overwrites methods
+the following is an example:
+'''
+
+class student(Person): #class parent specified as 
+    def __init__(self, IDnum, name,age): #args from the parent are still included since they have to be insert
+        Person.__init__(self,name,age)  #__init__ method from the parent class recalled to be filled by user/programmer
+        self.idnum = IDnum #new variable added for the child class
+        
+    def __str__(self):
+        return super().__str__() #will reutnr the __str__ of the parent
+    #YOU CANNOT HAVE BOTH - JUST FOR EXAMPLE
+    def __str__(self):
+        t = 'a new string for explanation ' #will return this str
+        return t   #redefined method
+    
+    def method(self):
+        #a new method, original for the child
+    
+    #all other methods from the father/parent class are preserved
+    #and they can be called with an instance specified with class child
+    
+    
+
+
+
+
+
 class child(parent):
     pass
 #you cna also add other things to the child class and still inherit the parent
@@ -1313,6 +1713,17 @@ class student(parent):
         super().__init__(fname,lname)
 
 help(student)
+
+
+
+
+
+
+
+
+
+
+
 
 
 
