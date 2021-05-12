@@ -1501,7 +1501,7 @@ random.random()
 #returns a random decimal number between 0 and 1
 
 random.randint(min,max)
-#returns a random integer number between min and max
+#returns a random integer number between min and max, both endpoints INCLUDED
 
 random.choice(list)
 #returns a ranodm element from the list given as argument
@@ -1610,7 +1610,7 @@ class test2:
         
 p1 = test2('John', 36)  #creates the object and provides with the variables init
 print(p1.name) #recalls the object and the variable name 
-print(p1.age) #recalls the object and the ariable age.
+print(p1.age) #recalls the object and the variable age.
 #the __init__() function is called each time the class is called to create the object.
 
 ##OBJECT METHDOS: objects can also contain methods --> functions belong to the object
