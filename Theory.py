@@ -37,7 +37,7 @@ min(list tuple strings  or integers)
 - #subtraction
 * #multiplication
 / #division
-// #floor division --> divides two numbers and rounds down to an integer
+// #floor division --> divides two numbers and rounds down to an integer --> come quelle che facevi in colonna
 % #modulus --> divides two integers and returns the vlaue of the reminddr
 ** #exponentiation
 
@@ -67,7 +67,7 @@ int(x) #takes in the value of x and tries to convert it to an integer
 float(x) #takes in the value of x and tries to convert it to a float
 str(x) #take in the value of x and tries to convert it to a string
 
-math #gives out more information about math 's statement
+math #gives out more information about math 's module (class) 
 #to access the functions within the module (math) you use the following syntax
 
 signal_power = 1100
@@ -125,7 +125,7 @@ function_two()
 
 
 
-math.sin
+math.sin()
 #sin requires an argument to the function itself
 #we want to create functions that have arguments
 #inside a function the argument is assigned to a variable, called paramenter
@@ -175,7 +175,7 @@ test(1,2,3,4,4,4,5,6,6)
 
 #if you want to set default values:
 def test2(par1,par2,par3,par4 = 5, par5 = 6):
-    #the optionals par4 and par5 have to be put after the mandatory ones, so the defualt always follow the mandatory.
+    #the optionals par4 and par5 have to be put after the mandatory ones, so the defualt, also called optional, always follow the mandatory.
 
 #you can call arguments as you wish
 test2(par2= 5, par3= 8)
@@ -233,7 +233,7 @@ turtle.mainloop()
 
 #CICLES:
 #for a for cycle using the range function:
-ii = 1
+#there is not need to declare ii
 for ii in range(10) :
     print('hello')
     
