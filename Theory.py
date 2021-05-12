@@ -1734,3 +1734,12 @@ ctrl+shift+L --> selects all occurences of that word.
 (ctrl+K) + (ctrl+C) --> turns all the selected lines into a comment
 """
 
+#for the exam:
+"""
+rember the " rather than the '
+rembember the return statement
+be formal
+"""
+
+
+
