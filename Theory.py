@@ -233,8 +233,13 @@ turtle.mainloop()
 
 #CICLES:
 #for a for cycle using the range function:
+<<<<<<< HEAD
 #there is not need to declare ii
 for ii in range(10) :
+=======
+
+for ii in range(10): # there is no need to define ii
+>>>>>>> 74c23127ab20696fe8bbd0cb1a2de1f9638bfe98
     print('hello')
     
     
@@ -242,13 +247,11 @@ for ii in range(10) :
     
 #Range function:
 #the range function returns the object that produces a sequence of integers from start (inclusive), to stop (exclusive) 
-# by increments of step
+# by increments of step:
 range(i, j)
 #if start is omitted the default value is 0
-
-
-    
-    
+#the last position of range is not used
+range(1,10,2) # starting from 1 going up to 9 stepping by 2 
     
 
 #EXAMPLE:
@@ -349,7 +352,7 @@ circle(bob, 30)
 
 #to generate ann arch we can refactor, thus make a code more reusable
 
-#to develop adn improvise a program go like this:
+#to develop and improvise a program go like this:
 #1. start by writing a small program with no function definitions
 #2. identify coherent pieces of the program, encapsulate in functions and given names
 #3. generalize the function by adding parameters
