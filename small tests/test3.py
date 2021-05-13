@@ -15,5 +15,18 @@ dizionario = {'gigi':33,
               'gogo':44,
               'toni':19,
               'ema':21}
-
 print(dizionario)
+dizionario.keys().sort()
+print(dizionario)
+
+
+
+
+lisa = ['pippo','baudo','ciccio','cannolo']
+print(lisa)
+lisa.sort(reverse=True)
+print(lisa)
+lisa.sort()
+print(lisa)
+
+

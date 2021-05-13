@@ -233,13 +233,8 @@ turtle.mainloop()
 
 #CICLES:
 #for a for cycle using the range function:
-<<<<<<< HEAD
-#there is not need to declare ii
-for ii in range(10) :
-=======
 
 for ii in range(10): # there is no need to define ii
->>>>>>> 74c23127ab20696fe8bbd0cb1a2de1f9638bfe98
     print('hello')
     
     
