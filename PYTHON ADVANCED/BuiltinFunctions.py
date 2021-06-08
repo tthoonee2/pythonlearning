@@ -52,6 +52,9 @@ for i,m in enumerate(zip(days,giorni),start = 1): #if the two sequences are not 
 
 
 
+
+
+
 #Use transform functions like sorted, filter, map
 ##FILTER FUNCTION:
 alllist = (1,2,3,4,5,6,7,8,9)
