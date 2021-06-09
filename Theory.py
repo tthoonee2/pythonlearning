@@ -989,7 +989,7 @@ b = a.copy() #returns a copy of the list
 
 
 #MAPPING, FILTERING AND REDUCING
-t = [1,2,3,4,5,6,6,7,5,4,3,2,2,3,4]
+lista = [1,2,3,4,5,6,6,7,5,4,3,2,2,3,4]
 def add_all(t): #where t is a list
     total = 0 
     for x in t:
